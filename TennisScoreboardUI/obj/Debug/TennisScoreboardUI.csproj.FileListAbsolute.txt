@@ -1,0 +1,15 @@
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\bin\Debug\TennisScoreboardUI.exe.config
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\bin\Debug\TennisScoreboardUI.exe
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\bin\Debug\TennisScoreboardUI.pdb
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\TennisScoreboardUI.csprojAssemblyReference.cache
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\MainWindow.g.cs
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\App.g.cs
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\TennisScoreboardUI_MarkupCompile.cache
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\TennisScoreboardUI_MarkupCompile.lref
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\MainWindow.baml
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\TennisScoreboardUI.g.resources
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\TennisScoreboardUI.Properties.Resources.resources
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\TennisScoreboardUI.csproj.GenerateResource.cache
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\TennisScoreboardUI.csproj.CoreCompileInputs.cache
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\TennisScoreboardUI.exe
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardUI\obj\Debug\TennisScoreboardUI.pdb
