@@ -19,6 +19,7 @@ namespace TennisScoreboardUnitTests
             Assert.AreEqual("win", game.AddScore(firstPlayer), false, "Score was not calculated correctly");
 
         }
+        [TestMethod]
         public void AddScoreDeuceAdvantageTest()
         {
             Game game = new Game(firstPlayer, secondPlayer);
@@ -33,6 +34,7 @@ namespace TennisScoreboardUnitTests
             Assert.AreEqual("win", game.AddScore(secondPlayer), false, "Score was not calculated correctly");
 
         }
+        [TestMethod]
         public void ResetScoreUnitTest()
         {
             Game game = new Game(firstPlayer, secondPlayer);
