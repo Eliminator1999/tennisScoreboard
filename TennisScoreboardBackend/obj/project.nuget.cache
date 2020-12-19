@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "i8KHQMQ4O0ZJdCegdt6tvORyi+AseYodG/ItI8AKQ6TT1q+071rsjFDwniPR+yFEE1631J9u833wjgzrnQ1NBg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\elie\\Documents\\hex\\TennisScoreboard\\TennisScoreboardBackend\\TennisScoreboardBackend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elie\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\elie\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
