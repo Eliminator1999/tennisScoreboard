@@ -8,10 +8,10 @@ namespace TennisScoreboardBackend
     public class Game
     {
         private string[] possibleScore = { "0", "15", "30", "40", "win", "deuce", "advantage", "disadvantage" };
-        private IDictionary<uint, string> gameScore { get; set; }
+        private IDictionary<uint, string> pointScore { get; set; }
         public Game(Player firstPlayer, Player secondPlayer)
         {
-            this.gameScore = new Dictionary<uint, string>
+            this.pointScore = new Dictionary<uint, string>
             {
                 { firstPlayer.id, possibleScore[0] },
                 { secondPlayer.id, possibleScore[0] }
@@ -21,7 +21,7 @@ namespace TennisScoreboardBackend
         private uint getOtherPlayerId(Player player)
         {
             uint otherPlayerId = 0;
-            foreach (uint playerId in this.gameScore.Keys)
+            foreach (uint playerId in this.pointScore.Keys)
             {
                 if (playerId != player.id)
                 {
@@ -33,42 +33,42 @@ namespace TennisScoreboardBackend
         public string AddScore(Player player)
         {
             uint otherPlayerId = getOtherPlayerId(player);
-            switch (this.gameScore[player.id])
+            switch (this.pointScore[player.id])
             {
                 case "30":
-                    if (this.gameScore[otherPlayerId] == "40")
+                    if (this.pointScore[otherPlayerId] == "40")
                     {
-                        this.gameScore[player.id] = "deuce";
-                        this.gameScore[otherPlayerId] = "deuce";
+                        this.pointScore[player.id] = "deuce";
+                        this.pointScore[otherPlayerId] = "deuce";
 
                     }
                     else {
-                        this.gameScore[player.id] = possibleScore[Array.IndexOf(possibleScore, gameScore[player.id]) + 1];
+                        this.pointScore[player.id] = possibleScore[Array.IndexOf(possibleScore, pointScore[player.id]) + 1];
                     }
                     break;
                 case "deuce":
-                    this.gameScore[player.id] = "advantage";
-                    this.gameScore[otherPlayerId] = "disadvantage";
+                    this.pointScore[player.id] = "advantage";
+                    this.pointScore[otherPlayerId] = "disadvantage";
                     break;
                 case "disadvantage":
-                    this.gameScore[player.id] = "deuce";
-                    this.gameScore[otherPlayerId] = "deuce";
+                    this.pointScore[player.id] = "deuce";
+                    this.pointScore[otherPlayerId] = "deuce";
                     break;
                 case "advantage":
-                    this.gameScore[player.id] = "win";
+                    this.pointScore[player.id] = "win";
                     break;
                 default:
-                    this.gameScore[player.id] = possibleScore[Array.IndexOf(possibleScore, gameScore[player.id]) + 1];
+                    this.pointScore[player.id] = possibleScore[Array.IndexOf(possibleScore, pointScore[player.id]) + 1];
                     break;
             }
-            return this.gameScore[player.id];
+            return this.pointScore[player.id];
         }
 
         public void ResetScore()
         {
-            foreach (uint playerId in this.gameScore.Keys.ToList())
+            foreach (uint playerId in this.pointScore.Keys.ToList())
             {
-                this.gameScore[playerId] = "0";
+                this.pointScore[playerId] = "0";
             }
         }
     }
