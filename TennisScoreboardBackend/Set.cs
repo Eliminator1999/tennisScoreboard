@@ -8,7 +8,7 @@ namespace TennisScoreboardBackend
     public class Set
     {
         private Game game;
-        private IDictionary<uint, string> gameScore { get; set; }
+        private Dictionary<uint, string> gameScore { get; set; }
         public Set(Player firstPlayer, Player secondPlayer)
         {
             game = new Game(firstPlayer, secondPlayer);
@@ -59,6 +59,18 @@ namespace TennisScoreboardBackend
             {
                 this.gameScore[playerId] = "0";
             }
+        }
+
+        public Dictionary<uint, List<string>> getScore()
+        {
+            Dictionary<uint, List<string>> totalScore = new Dictionary<uint, List<string>>();
+            Dictionary<uint, string> pointScore = game.getScore();
+            foreach (uint playerID in pointScore.Keys)
+            {
+                List<string> score = new List<string> { pointScore[playerID], gameScore[playerID] };
+                totalScore.Add(playerID, score);
+            }
+            return totalScore;
         }
     }
 }

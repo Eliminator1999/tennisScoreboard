@@ -44,5 +44,19 @@ namespace TennisScoreboardUnitTests
             Assert.AreEqual("15", game.AddScore(firstPlayer), false, "Reset score did not return zero");
             Assert.AreEqual("15", game.AddScore(secondPlayer), false, "Reset score did not return zero");
         }
+        [TestMethod]
+        public void GetScoreUnitTests() 
+        {
+            Game game = new Game(firstPlayer, secondPlayer);
+            Assert.AreEqual("0", game.getScore()[firstPlayer.id], false, "GetScore exited with an error");
+            game.AddScore(firstPlayer);
+            Assert.AreEqual("15", game.getScore()[firstPlayer.id], false, "GetScore exited with an error");
+            game.AddScore(firstPlayer);
+            Assert.AreEqual("30", game.getScore()[firstPlayer.id], false, "GetScore exited with an error");
+            game.AddScore(firstPlayer);
+            Assert.AreEqual("40", game.getScore()[firstPlayer.id], false, "GetScore exited with an error");
+            game.AddScore(firstPlayer);
+            Assert.AreEqual("win", game.getScore()[firstPlayer.id], false, "GetScore exited with an error");
+        }
     }
 }

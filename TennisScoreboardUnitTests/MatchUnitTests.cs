@@ -20,7 +20,7 @@ namespace TennisScoreboardUnitTests
                     match.AddScore(firstPlayer);
                 }
             }
-            Assert.AreEqual((uint) 1, match.AddScore(firstPlayer));
+            Assert.AreEqual("1", match.getScore()[firstPlayer.id][2]);
         }
     }
 }

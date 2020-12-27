@@ -8,7 +8,7 @@ namespace TennisScoreboardBackend
     public class Game
     {
         private string[] possibleScore = { "0", "15", "30", "40", "win", "deuce", "advantage", "disadvantage" };
-        private IDictionary<uint, string> pointScore { get; set; }
+        private Dictionary<uint, string> pointScore { get; set; }
         public Game(Player firstPlayer, Player secondPlayer)
         {
             this.pointScore = new Dictionary<uint, string>
@@ -70,6 +70,11 @@ namespace TennisScoreboardBackend
             {
                 this.pointScore[playerId] = "0";
             }
+        }
+
+        public Dictionary<uint, string> getScore()
+        {
+            return this.pointScore;
         }
     }
 }

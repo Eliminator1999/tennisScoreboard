@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using TennisScoreboardBackend;
 
 namespace TennisScoreboardUnitTests
@@ -68,6 +69,26 @@ namespace TennisScoreboardUnitTests
             set.ResetScore();
             Assert.AreEqual("0", set.AddScore(firstPlayer), false, "Reset score did not return zero");
             Assert.AreEqual("0", set.AddScore(secondPlayer), false, "Reset score did not return zero");
+        }
+        [TestMethod]
+        public void GetScoreUnitTests()
+        {
+            Set set = new Set(firstPlayer, secondPlayer);
+            List<string> expected = new List<string>{"0", "0" };
+            CollectionAssert.AreEqual(expected, set.getScore()[firstPlayer.id]);
+            expected[0] = "15";
+            set.AddScore(firstPlayer);
+            CollectionAssert.AreEqual(expected, set.getScore()[firstPlayer.id]);
+            expected[0] = "30";
+            set.AddScore(firstPlayer);
+            CollectionAssert.AreEqual(expected, set.getScore()[firstPlayer.id]);
+            expected[0] = "40";
+            set.AddScore(firstPlayer);
+            CollectionAssert.AreEqual(expected, set.getScore()[firstPlayer.id]);
+            expected[0] = "0";
+            expected[1] = "1";
+            set.AddScore(firstPlayer);
+            CollectionAssert.AreEqual(expected, set.getScore()[firstPlayer.id]);
         }
     }
 }
