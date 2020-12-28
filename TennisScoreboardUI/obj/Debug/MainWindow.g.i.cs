@@ -128,7 +128,7 @@ namespace TennisScoreboardUI {
             this.StartGameButton = ((System.Windows.Controls.Button)(target));
             
             #line 12 "..\..\MainWindow.xaml"
-            this.StartGameButton.Click += new System.Windows.RoutedEventHandler(this.Button_Click);
+            this.StartGameButton.Click += new System.Windows.RoutedEventHandler(this.Start_Game);
             
             #line default
             #line hidden

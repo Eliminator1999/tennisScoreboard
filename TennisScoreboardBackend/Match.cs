@@ -1,20 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace TennisScoreboardBackend
 {
+    /// <summary>
+    /// Class Match manages the amount of sets won by each player (1-2)
+    /// </summary>
     public class Match
     {
         public enum State { notStarted, inProgress, finished }
         private State state = State.notStarted;
-        private Set set;
+        private readonly Set set;
         private Dictionary<uint, uint> setScore { get; set; }
-        private Dictionary<uint, List<string>> setHistory;
+
+        // Variable that tracks the of each player in each set
+        private readonly Dictionary<uint, List<string>> setHistory;
         private uint matchNumber;
         private List<string> score;
-        private Player firstPlayer;
-        private Player secondPlayer;
+        private readonly Player firstPlayer;
+        private readonly Player secondPlayer;
         private Player winner;
 
         public Match(Player firstPlayer, Player secondPlayer)
@@ -33,6 +36,11 @@ namespace TennisScoreboardBackend
                 { secondPlayer.id, new List<string>{"0","0","0"}}
             };
         }
+
+        /// <summary>
+        /// Add score to a player
+        /// </summary>
+        /// <param name="player">the player who will get a point</param>
         public void AddScore(Player player)
         {
             if (state == State.finished)
@@ -48,8 +56,7 @@ namespace TennisScoreboardBackend
             {
                 matchNumber += setScore[playerID];
             }
-            bool win;
-            string pointScore = this.set.AddScore(player, out win);
+            string pointScore = this.set.AddScore(player, out bool win);
             Player otherPlayer = player.id == firstPlayer.id ? secondPlayer : firstPlayer;
             this.setHistory[player.id][(int)matchNumber] = pointScore;
             this.setHistory[otherPlayer.id][(int)matchNumber] = this.set.getScore()[otherPlayer.id][1];
@@ -73,6 +80,8 @@ namespace TennisScoreboardBackend
         {
             return winner;
         }
+
+        ///<summary>return the total score of both players</summary>
         public Dictionary<uint, List<string>> getScore()
         {
             Dictionary<uint, List<string>> totalScore = new Dictionary<uint, List<string>>();

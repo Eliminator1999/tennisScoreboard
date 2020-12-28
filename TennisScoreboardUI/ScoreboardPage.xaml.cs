@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using TennisScoreboardBackend;
 
 namespace TennisScoreboardUI
@@ -25,6 +15,7 @@ namespace TennisScoreboardUI
         private readonly Player firstPlayer;
         private readonly Player secondPlayer;
 
+
         public ScoreboardPage(List<string> playerNames)
         {
             InitializeComponent();
@@ -37,6 +28,9 @@ namespace TennisScoreboardUI
             this.SecondPlayerName.Text = playerNames[1];
         }
 
+        /// <summary>
+        /// Function triggered by a button click and adds score to the player.
+        /// </summary>
         private void AddScore(object sender, RoutedEventArgs e)
         {
             var tag = ((Button)sender).Tag;
@@ -52,10 +46,14 @@ namespace TennisScoreboardUI
             GetScore();
             if (match.GetState() == Match.State.finished)
             {
-                MessageBox.Show(match.GetWinner().name + "has won");
+                MessageBox.Show(match.GetWinner().name + " has won");
             }
 
         }
+
+        /// <summary>
+        /// Set the score on the dashboard.
+        /// </summary>
         private void GetScore()
         {
             Dictionary<uint, List<string>> totalScore = this.match.getScore();

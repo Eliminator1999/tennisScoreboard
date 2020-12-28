@@ -9,11 +9,11 @@
     <Grid>
         <TextBox x:Name="FirstPlayerName" Height="23" Margin="150,136,442,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
         <TextBox x:Name="SecondPlayerName" Height="23" Margin="442,136,150,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-        <Button x:Name="StartGameButton" Content="Start Game" Margin="346,291,346,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button x:Name="StartGameButton" Content="Start Game" Margin="346,291,346,0" VerticalAlignment="Top" Click="Start_Game"/>
         <DockPanel>
             <Frame x:Name="Frame" Content="" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772"/>
         </DockPanel>
-        <TextBlock x:Name="FirstPlayerText" HorizontalAlignment="Left" Margin="150,115,0,0" TextWrapping="Wrap" Text="First Player" VerticalAlignment="Top" Width="200"/>
-        <TextBlock x:Name="SecondPlayerText" HorizontalAlignment="Left" Margin="442,115,0,0" TextWrapping="Wrap" Text="Second Player" VerticalAlignment="Top" Width="200"/>
+        <TextBlock x:Name="FirstPlayerText" HorizontalAlignment="Left" Margin="150,115,0,0" TextWrapping="Wrap" Text="First Player Name" VerticalAlignment="Top" Width="200"/>
+        <TextBlock x:Name="SecondPlayerText" HorizontalAlignment="Left" Margin="442,115,0,0" TextWrapping="Wrap" Text="Second Player Name" VerticalAlignment="Top" Width="200"/>
     </Grid>
 </Window>

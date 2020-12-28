@@ -10,6 +10,9 @@ namespace TennisScoreboardUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Registration page.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -18,8 +21,10 @@ namespace TennisScoreboardUI
 
         }
 
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Check if players name are not empty and start the game.
+        /// </summary>
+        private void Start_Game(object sender, RoutedEventArgs e)
         {
             if (!String.IsNullOrWhiteSpace(this.FirstPlayerName.Text) && !String.IsNullOrWhiteSpace(this.SecondPlayerName.Text))
             {
@@ -34,6 +39,10 @@ namespace TennisScoreboardUI
                 MessageBox.Show("Players Names are Mandtory");
             }
         }
+
+        /// <summary>
+        /// Hide registration page.
+        /// </summary>
         private void Hide_Main()
         {
             this.FirstPlayerText.Visibility = Visibility.Collapsed;

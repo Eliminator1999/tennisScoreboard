@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace TennisScoreboardBackend
 {
+    /// <summary>
+    /// Class Set manages the amount of games won by each player (1-6/7)
+    /// </summary>
     public class Set
     {
         private Game game;
@@ -18,6 +20,12 @@ namespace TennisScoreboardBackend
                 { secondPlayer.id, "0"}
             };
         }
+
+        /// <summary>
+        /// Return the other player id.
+        /// </summary>
+        /// <param name="player">the known player</param>
+        /// <returns>A uint representing the unknown player id</returns>
         private uint getOtherPlayerId(Player player)
         {
             uint otherPlayerId = 0;
@@ -31,6 +39,12 @@ namespace TennisScoreboardBackend
             return otherPlayerId;
         }
 
+        /// <summary>
+        /// Add score to a player
+        /// </summary>
+        /// <param name="player">the player who will get a point</param>
+        /// <param name="win">a boolean determining if the player won a set (won 6 or 7 games)</param>
+        /// <returns>A string representing the new score of the player</returns>
         public string AddScore(Player player, out bool win)
         {
             win = false;
@@ -51,6 +65,10 @@ namespace TennisScoreboardBackend
             
             return this.gameScore[player.id];
         }
+
+        /// <summary>
+        /// Reset the score of the set back to "0"
+        /// </summary>
         public void ResetScore()
         {
             foreach (uint playerId in this.gameScore.Keys.ToList())
@@ -59,6 +77,7 @@ namespace TennisScoreboardBackend
             }
         }
 
+        ///<summary>return the set score of both players</summary>
         public Dictionary<uint, List<string>> getScore()
         {
             Dictionary<uint, List<string>> totalScore = new Dictionary<uint, List<string>>();
