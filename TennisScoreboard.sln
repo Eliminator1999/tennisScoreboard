@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisScoreboardUI", "TennisScoreboardUI\TennisScoreboardUI.csproj", "{D17185DB-0AC4-4351-863D-9E5AA0210234}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisScoreboardBackend", "TennisScoreboardBackend\TennisScoreboardBackend.csproj", "{E8F1BEEE-8AD1-4FFA-BEEB-C8C4F329A515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TennisScoreboardBackend", "TennisScoreboardBackend\TennisScoreboardBackend.csproj", "{E8F1BEEE-8AD1-4FFA-BEEB-C8C4F329A515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisScoreboardUnitTests", "TennisScoreboardUnitTests\TennisScoreboardUnitTests.csproj", "{B57CB788-C97A-4B37-9DBC-58C8B5A03657}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TennisScoreboardUnitTests", "TennisScoreboardUnitTests\TennisScoreboardUnitTests.csproj", "{B57CB788-C97A-4B37-9DBC-58C8B5A03657}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

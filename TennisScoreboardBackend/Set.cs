@@ -31,8 +31,9 @@ namespace TennisScoreboardBackend
             return otherPlayerId;
         }
 
-        public string AddScore(Player player)
+        public string AddScore(Player player, out bool win)
         {
+            win = false;
             string pointScore = this.game.AddScore(player);
             if (pointScore == "win")
             {
@@ -42,12 +43,9 @@ namespace TennisScoreboardBackend
                 this.gameScore[player.id] = newScore.ToString();
                 if (newScore == 7 || (newScore == 6 && otherPlayerScore < 5))
                 {
-                    return "win";
+                    win = true;
                 }
-                else
-                {
-                    return this.gameScore[player.id];
-                }
+                return this.gameScore[player.id];
                 
             }
             

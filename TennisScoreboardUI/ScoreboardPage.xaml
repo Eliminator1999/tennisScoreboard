@@ -1,0 +1,31 @@
+﻿<Page x:Class="TennisScoreboardUI.ScoreboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TennisScoreboardUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ScoreboardPage">
+
+    <Grid >
+        <Button x:Name="AddScoreFirstPlayer" Content="Add Point" HorizontalAlignment="Left" Margin="48,89,0,0" VerticalAlignment="Top" Width="75" Click="AddScore" Tag="firstPlayer" Height="44"/>
+        <TextBlock x:Name="FirstPlayerName" HorizontalAlignment="Left" Margin="156,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="122" Width="122" FontSize="20" FontWeight="Bold"/>
+        <TextBlock x:Name="SecondPlayerName" HorizontalAlignment="Left" Margin="156,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="148" Width="122" FontWeight="Bold" FontSize="20"/>
+        <TextBlock x:Name="FirstPlayerPointScore" HorizontalAlignment="Left" Margin="283,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="119" Text="0" FontWeight="Bold" FontSize="80" TextAlignment="Center"/>
+        <TextBlock x:Name="SecondPlayerPointScore" HorizontalAlignment="Left" Margin="283,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="119" Text="0" FontWeight="Bold" FontSize="80" TextAlignment="Center"/>
+        <Button x:Name="AddScoreSecondPlayer" Content="Add Point" HorizontalAlignment="Left" Margin="48,277,0,0" VerticalAlignment="Top" Width="75" Click="AddScore" Tag="secondPlayer" Height="44"/>
+        <Grid x:Name="ScoreGrid">
+            <TextBlock x:Name="FirstPlayerFirstSetScore" Tag="00" HorizontalAlignment="Left" Margin="407,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="119" Text="0" FontWeight="Bold" FontSize="80" TextAlignment="Center"/>
+            <TextBlock x:Name="FirstPlayerSecondSetScore" Tag="01" HorizontalAlignment="Left" Margin="531,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="119" Text="0" FontWeight="Bold" FontSize="80" TextAlignment="Center"/>
+            <TextBlock x:Name="FirstPlayerThirdSetScore" Tag="02" HorizontalAlignment="Left" Margin="655,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="119" Text="0" FontWeight="Bold" FontSize="80" TextAlignment="Center"/>
+            <TextBlock x:Name="SecondPlayerFirstSetScore" Tag="10" HorizontalAlignment="Left" Margin="407,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="119" Text="0" FontWeight="Bold" FontSize="80" TextAlignment="Center"/>
+            <TextBlock x:Name="SecondPlayerSecondSetScore" Tag="11" HorizontalAlignment="Left" Margin="531,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="119" Text="0" FontWeight="Bold" FontSize="80" TextAlignment="Center"/>
+            <TextBlock x:Name="SecondPlayerThirdSetScore" Tag="12" HorizontalAlignment="Left" Margin="655,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="119" Text="0" FontWeight="Bold" FontSize="80" TextAlignment="Center"/>
+        </Grid>    
+        <TextBlock HorizontalAlignment="Left" Margin="407,33,0,0" TextWrapping="Wrap" Text="          1" VerticalAlignment="Top" Width="119" Background="#FFE6F1F0" FontWeight="Bold" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="531,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Background="#FFE6F1F0" FontWeight="Bold" FontSize="20" Text="          2"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="          3" VerticalAlignment="Top" Width="119" Background="#FFE6F1F0" FontWeight="Bold" FontSize="20" Margin="655,33,0,0"/>
+
+    </Grid>
+</Page>

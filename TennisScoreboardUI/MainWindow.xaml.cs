@@ -1,17 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TennisScoreboardUI
 {
@@ -23,11 +13,34 @@ namespace TennisScoreboardUI
         public MainWindow()
         {
             InitializeComponent();
+            this.Frame.Visibility = Visibility.Hidden;
+            this.Frame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
+
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(this.FirstPlayerName.Text) && !String.IsNullOrWhiteSpace(this.SecondPlayerName.Text))
+            {
+                List<string> playerNames = new List<string> { this.FirstPlayerName.Text, this.SecondPlayerName.Text };
+                ScoreboardPage sbp = new ScoreboardPage(playerNames);
+                this.Frame.Navigate(sbp);
+                Hide_Main();
+                this.Frame.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                MessageBox.Show("Players Names are Mandtory");
+            }
+        }
+        private void Hide_Main()
+        {
+            this.FirstPlayerText.Visibility = Visibility.Collapsed;
+            this.SecondPlayerText.Visibility = Visibility.Collapsed;
+            this.FirstPlayerName.Visibility = Visibility.Collapsed;
+            this.SecondPlayerName.Visibility = Visibility.Collapsed;
+            this.StartGameButton.Visibility = Visibility.Collapsed;
         }
     }
 }

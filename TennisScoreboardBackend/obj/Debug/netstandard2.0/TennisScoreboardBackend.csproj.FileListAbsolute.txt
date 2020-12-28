@@ -1,9 +1,9 @@
 C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardBackend\bin\Debug\netstandard2.0\TennisScoreboardBackend.deps.json
 C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardBackend\bin\Debug\netstandard2.0\TennisScoreboardBackend.dll
 C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardBackend\bin\Debug\netstandard2.0\TennisScoreboardBackend.pdb
-C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardBackend\obj\Debug\netstandard2.0\TennisScoreboardBackend.csprojAssemblyReference.cache
 C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardBackend\obj\Debug\netstandard2.0\TennisScoreboardBackend.AssemblyInfoInputs.cache
 C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardBackend\obj\Debug\netstandard2.0\TennisScoreboardBackend.AssemblyInfo.cs
 C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardBackend\obj\Debug\netstandard2.0\TennisScoreboardBackend.csproj.CoreCompileInputs.cache
 C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardBackend\obj\Debug\netstandard2.0\TennisScoreboardBackend.dll
 C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardBackend\obj\Debug\netstandard2.0\TennisScoreboardBackend.pdb
+C:\Users\elie\Documents\hex\TennisScoreboard\TennisScoreboardBackend\obj\Debug\netstandard2.0\TennisScoreboardBackend.csprojAssemblyReference.cache
